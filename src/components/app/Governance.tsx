@@ -118,7 +118,7 @@ export function LockPage() {
                 </text>
               </g>
             ))}
-            <polyline points={pts} fill="none" stroke="#e3c892" strokeWidth="1.8" />
+            <polyline points={pts} fill="none" stroke="#ebcf98" strokeWidth="1.8" />
             <text x="20" y="194" fill="#83817b" style={{ fontFamily: "var(--font-mono)", fontSize: 10 }}>
               NOW
             </text>
@@ -145,7 +145,7 @@ export function LockPage() {
             <p className="mt-2 text-[14px] text-ink">
               {weeks} weeks{unlock ? ` · unlock ${new Date(unlock * 1000).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" })}` : ""}
             </p>
-            <input type="range" min={1} max={maxW} value={weeks} onChange={(e) => setWeeks(Number(e.target.value))} aria-label="Lock length in weeks" className="mt-3 w-full accent-[#cba86a]" />
+            <input type="range" min={1} max={maxW} value={weeks} onChange={(e) => setWeeks(Number(e.target.value))} aria-label="Lock length in weeks" className="mt-3 w-full accent-[#e0bd7a]" />
             <div className="mt-2 grid grid-cols-5 gap-1.5">
               {presets.map((p) => (
                 <button key={p.l} type="button" onClick={() => setWeeks(p.w)} className={`rounded-md border px-2 py-1.5 font-mono text-[11.5px] ${weeks === p.w ? "border-metal/60 text-metal" : "border-white/[0.1] text-ink-2"}`}>

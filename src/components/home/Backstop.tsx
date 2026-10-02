@@ -82,7 +82,7 @@ export function Backstop() {
                       <td className="px-6 py-3.5">
                         <div className="relative h-[3px] rounded bg-white/[0.07]">
                           <div
-                            className="absolute inset-y-0 rounded bg-[linear-gradient(90deg,#9a7a44,#e3c892)]"
+                            className="absolute inset-y-0 rounded bg-[linear-gradient(90deg,#a8854a,#ebcf98)]"
                             style={{ left: `${(t.band[0] / MAX) * 100}%`, width: `${((t.band[1] - t.band[0]) / MAX) * 100}%` }}
                           />
                           <div className="absolute -top-[5px] h-[13px] w-px bg-ink" style={{ left: `${(t.backstopMin / MAX) * 100}%` }} />

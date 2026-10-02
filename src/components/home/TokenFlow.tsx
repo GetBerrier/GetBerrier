@@ -8,8 +8,8 @@ function Node({ x, y, w, title, lines, hot = false }: { x: number; y: number; w:
   const h = 22 + lines.length * 14;
   return (
     <g>
-      <rect x={x} y={y} width={w} height={h} rx="5" fill="#141416" stroke={hot ? "rgba(203,168,106,0.7)" : "rgba(255,255,255,0.18)"} />
-      {hot ? <line x1={x + 6} x2={x + w - 6} y1={y} y2={y} stroke="#e3c892" strokeWidth="1.5" /> : null}
+      <rect x={x} y={y} width={w} height={h} rx="5" fill="#141416" stroke={hot ? "rgba(224,189,122,0.7)" : "rgba(255,255,255,0.18)"} />
+      {hot ? <line x1={x + 6} x2={x + w - 6} y1={y} y2={y} stroke="#ebcf98" strokeWidth="1.5" /> : null}
       <text x={x + 12} y={y + 18} fill="#f4f2ee" style={mono}>{title}</text>
       {lines.map((l, i) => (
         <text key={l} x={x + 12} y={y + 32 + i * 14} fill="#83817b" style={mono}>{l}</text>
@@ -20,7 +20,7 @@ function Node({ x, y, w, title, lines, hot = false }: { x: number; y: number; w:
 
 function Flow() {
   const pulse = (d: string, delay: number) => (
-    <circle r="3" fill="#e3c892">
+    <circle r="3" fill="#ebcf98">
       <animateMotion dur="3.2s" begin={`${delay}s`} repeatCount="indefinite" path={d} />
     </circle>
   );
@@ -41,7 +41,7 @@ function Flow() {
       {pulse(d, 1.7)}
       {pulse(e, 2.1)}
       {pulse(f, 0.4)}
-      <text x="562" y="140" fill="#e3c892" style={mono}>{FEES.toBuyback}%</text>
+      <text x="562" y="140" fill="#ebcf98" style={mono}>{FEES.toBuyback}%</text>
       <text x="562" y="196" fill="#a6a39c" style={mono}>{FEES.toTreasury}%</text>
       <Node x={130} y={130} w={160} title="FEES" lines={[`${FEES.couponShare}% OF COUPONS`, `${FEES.notional.toFixed(2)}% OF NOTIONAL`]} />
       <Node x={400} y={134} w={152} title="FEEROUTER" lines={["SPLITS EVERY FEE"]} hot />

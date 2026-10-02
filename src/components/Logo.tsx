@@ -1,17 +1,13 @@
 import Link from "next/link";
 
 /**
- * The Get Berrier mark: a berry outline with a price path inside, resting on
- * a brushed-gold barrier line that runs past its edges.
+ * The Get Berrier mark: the owner's gold hexagonal "G", served as a trimmed
+ * transparent webp (public/brand/mark.webp, 373 x 430 artwork plus 2% margin).
+ * `size` is the rendered height in pixels.
  */
 export function Mark({ size = 24, className = "" }: { size?: number; className?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden className={`shrink-0 ${className}`}>
-      <circle cx="12" cy="12" r="9.25" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M6.6 12.3L9.6 8.8L12.2 11.1L16 6.9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M1.5 15.4H22.5" stroke="#d4b273" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
+  const width = Math.round(size * 0.871);
+  return <img src="/brand/mark.webp" alt="" aria-hidden width={width} height={size} className={`shrink-0 select-none ${className}`} style={{ width, height: size }} draggable={false} />;
 }
 
 export function Wordmark({ className = "" }: { className?: string }) {

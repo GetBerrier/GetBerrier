@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section className="relative isolate overflow-hidden pt-16">
       <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(70%_60%_at_72%_38%,rgba(203,168,106,0.10),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(70%_60%_at_72%_38%,rgba(224,189,122,0.10),transparent_70%)]" />
         <div className="absolute inset-y-0 right-0 w-full opacity-90 lg:w-[72%]">
           <HeroScene />
         </div>
@@ -24,7 +24,7 @@ export function Hero() {
 
       <div className="wrap flex min-h-[calc(100svh-64px)] flex-col justify-center pb-20 pt-24 lg:min-h-[760px]">
         <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11.5px] uppercase tracking-[0.18em] text-ink-2">
-          <span className="size-1.5 rounded-full bg-metal shadow-[0_0_12px_rgba(203,168,106,0.8)]" />
+          <span className="size-1.5 rounded-full bg-metal shadow-[0_0_12px_rgba(224,189,122,0.8)]" />
           Robinhood Chain
           <span className="text-ink-3">· autocallable barrier notes</span>
         </p>

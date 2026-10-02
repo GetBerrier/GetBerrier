@@ -83,7 +83,7 @@ export function HeroScene() {
         const b = project(i * 0.5, 0, 30);
         if (!a || !b) continue;
         const lane = i === -2 || i === 2;
-        ctx.strokeStyle = lane ? "rgba(203,168,106,0.55)" : "rgba(255,255,255,0.07)";
+        ctx.strokeStyle = lane ? "rgba(224,189,122,0.55)" : "rgba(255,255,255,0.07)";
         ctx.lineWidth = lane ? 1.2 : 1;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
@@ -110,8 +110,8 @@ export function HeroScene() {
       const p4 = project(-1, 0, 30);
       if (p1 && p2 && p3 && p4) {
         const g = ctx.createLinearGradient(p1.x, p1.y, p3.x, p3.y);
-        g.addColorStop(0, "rgba(203,168,106,0.10)");
-        g.addColorStop(1, "rgba(203,168,106,0)");
+        g.addColorStop(0, "rgba(224,189,122,0.10)");
+        g.addColorStop(1, "rgba(224,189,122,0)");
         ctx.fillStyle = g;
         ctx.beginPath();
         ctx.moveTo(p1.x, p1.y);
@@ -129,7 +129,7 @@ export function HeroScene() {
         const top = project(0, 2.6, z);
         if (!base || !top) continue;
         const fade = Math.max(0, Math.min(1, (24 - z) / 20)) * Math.max(0, Math.min(1, (z + 3) / 2));
-        ctx.strokeStyle = `rgba(243,227,190,${0.22 * fade})`;
+        ctx.strokeStyle = `rgba(245,226,184,${0.22 * fade})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(base.x, base.y);
@@ -165,8 +165,8 @@ export function HeroScene() {
       if (head) {
         const r = 18;
         const glow = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, r * 2.4);
-        glow.addColorStop(0, "rgba(243,227,190,0.55)");
-        glow.addColorStop(1, "rgba(243,227,190,0)");
+        glow.addColorStop(0, "rgba(245,226,184,0.55)");
+        glow.addColorStop(1, "rgba(245,226,184,0)");
         ctx.fillStyle = glow;
         ctx.beginPath();
         ctx.arc(head.x, head.y, r * 2.4, 0, Math.PI * 2);

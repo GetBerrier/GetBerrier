@@ -12,10 +12,10 @@
   --color-ink: #f4f2ee;
   --color-ink-2: #a6a39c;
   --color-ink-3: #83817b;
-  --color-metal-hi: #f3e3be;
-  --color-metal-light: #e3c892;
-  --color-metal: #cba86a;
-  --color-metal-deep: #9a7a44;
+  --color-metal-hi: #f5e2b8;
+  --color-metal-light: #ebcf98;
+  --color-metal: #e0bd7a;
+  --color-metal-deep: #a8854a;
   --color-settle: #5fd39b;
   --color-breach: #e0574f;
   --color-cool: #9db4c9;
@@ -59,8 +59,8 @@
   --hair-2: rgba(255, 255, 255, 0.08);
   --hair-3: rgba(255, 255, 255, 0.12);
   --hair-4: rgba(255, 255, 255, 0.22);
-  --metal-gradient: linear-gradient(135deg, #f3e3be 0%, #cba86a 45%, #9a7a44 100%);
-  --metal-text: linear-gradient(120deg, #f3e3be 0%, #e3c892 35%, #cba86a 60%, #9a7a44 100%);
+  --metal-gradient: linear-gradient(135deg, #f5e2b8 0%, #e0bd7a 45%, #a8854a 100%);
+  --metal-text: linear-gradient(120deg, #f5e2b8 0%, #ebcf98 35%, #e0bd7a 60%, #a8854a 100%);
   --max: 1200px;
   --gutter: clamp(16px, 4vw, 40px);
   --section: clamp(88px, 11vw, 160px);
@@ -85,7 +85,7 @@ body {
 }
 
 ::selection {
-  background: rgba(203, 168, 106, 0.32);
+  background: rgba(224,189,122, 0.32);
   color: #fff;
 }
 
@@ -215,9 +215,9 @@ body {
   .btn-metal {
     color: #17130b;
     background: var(--metal-gradient);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 10px 30px -12px rgba(203, 168, 106, 0.55);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 10px 30px -12px rgba(224,189,122, 0.55);
   }
-  .btn-metal:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 16px 36px -12px rgba(203, 168, 106, 0.7); }
+  .btn-metal:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 16px 36px -12px rgba(224,189,122, 0.7); }
   .btn-ghost {
     color: var(--color-ink);
     background: rgba(255, 255, 255, 0.02);

@@ -60,7 +60,13 @@ Open http://localhost:4760.
 
 For development with hot reload: `npm run dev` (also port 4760).
 
-Optional environment variables, in a `.env.local` file you create yourself:
+Optional environment variables: copy the template and fill in only what you need (every value in it starts empty):
+
+```bash
+cp .env.example .env.local
+```
+
+The variables:
 
 | Name | What it does |
 |---|---|

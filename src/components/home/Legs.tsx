@@ -12,7 +12,7 @@ function LegCard({ n, name, who, letter, body, rows }: { n: number; name: string
           <p className="mt-4 font-display text-[24px] tracking-[0.02em]">{name}</p>
           <p className="mt-1 text-[14px] text-ink">{who}</p>
         </div>
-        <span className="relative grid size-14 place-items-center rounded-[10px] border border-white/[0.14] bg-g3 font-mono text-[18px] shadow-[inset_0_-10px_14px_-12px_rgba(203,168,106,0.6)]">
+        <span className="relative grid size-14 place-items-center rounded-[10px] border border-white/[0.14] bg-g3 font-mono text-[18px] shadow-[inset_0_-10px_14px_-12px_rgba(224,189,122,0.6)]">
           {letter}
           <span className={`absolute right-2 top-2 size-1.5 rounded-full ${n === 0 ? "bg-metal" : "bg-ink-2"}`} />
         </span>
@@ -36,12 +36,12 @@ function EscrowFigure() {
   const y = (p: number) => 140 - (p - 100) * 4;
   return (
     <svg viewBox="0 0 260 300" className="h-auto w-full" aria-hidden>
-      <text x="20" y="36" fill="#cba86a" style={mono}>COUPON 0.55% / WK</text>
+      <text x="20" y="36" fill="#e0bd7a" style={mono}>COUPON 0.55% / WK</text>
       {Array.from({ length: 12 }, (_, i) => (
-        <line key={i} x1={xs(i)} x2={xs(i)} y1="46" y2="56" stroke={i < 4 ? "#cba86a" : "rgba(255,255,255,0.18)"} strokeWidth={i < 4 ? 1.6 : 1} />
+        <line key={i} x1={xs(i)} x2={xs(i)} y1="46" y2="56" stroke={i < 4 ? "#e0bd7a" : "rgba(255,255,255,0.18)"} strokeWidth={i < 4 ? 1.6 : 1} />
       ))}
-      <line x1="20" x2="240" y1="140" y2="140" stroke="#cba86a" strokeOpacity="0.7" />
-      <text x="240" y="132" textAnchor="end" fill="#cba86a" style={mono}>S0 100</text>
+      <line x1="20" x2="240" y1="140" y2="140" stroke="#e0bd7a" strokeOpacity="0.7" />
+      <text x="240" y="132" textAnchor="end" fill="#e0bd7a" style={mono}>S0 100</text>
       <polyline points={path.map((p, i) => `${xs(i)},${y(p)}`).join(" ")} fill="none" stroke="#f4f2ee" strokeWidth="1.5" />
       <line x1="20" x2="240" y1="220" y2="220" stroke="rgba(244,242,238,0.55)" />
       <text x="20" y="212" fill="#d8d4cc" style={mono}>BARRIER 80</text>

@@ -51,8 +51,8 @@ export function PathChart({ step, compact = false }: { step: ChartStep; compact?
       {/* levels */}
       <line x1={X0 - 10} x2={X1} y1={yAc} y2={yAc} stroke="rgba(244,242,238,0.28)" />
       <text x={X0} y={yAc - 8} fill="#a6a39c" style={mono}>AUTOCALL {LEVELS.autocall}</text>
-      <line x1={X0 - 10} x2={X1} y1={yS0} y2={yS0} stroke="#cba86a" strokeOpacity="0.75" />
-      <text x={X0} y={yS0 + 17} fill="#cba86a" style={mono}>S0 {LEVELS.s0}</text>
+      <line x1={X0 - 10} x2={X1} y1={yS0} y2={yS0} stroke="#e0bd7a" strokeOpacity="0.75" />
+      <text x={X0} y={yS0 + 17} fill="#e0bd7a" style={mono}>S0 {LEVELS.s0}</text>
       <line x1={X0 - 10} x2={X1} y1={yB} y2={yB} stroke="rgba(244,242,238,0.55)" />
       <text x={X0} y={yB - 8} fill="#d8d4cc" style={mono}>BARRIER {LEVELS.barrier}</text>
 
@@ -75,28 +75,28 @@ export function PathChart({ step, compact = false }: { step: ChartStep; compact?
       {shown.map((p, i) =>
         i > 0 && i <= paidUpTo && p >= LEVELS.barrier ? (
           <g key={i}>
-            <circle cx={xAt(i)} cy={yAt(p)} r="7" fill="rgba(203,168,106,0.16)" />
-            <circle cx={xAt(i)} cy={yAt(p)} r="2.6" fill="#cba86a" />
+            <circle cx={xAt(i)} cy={yAt(p)} r="7" fill="rgba(224,189,122,0.16)" />
+            <circle cx={xAt(i)} cy={yAt(p)} r="2.6" fill="#e0bd7a" />
           </g>
         ) : null,
       )}
 
       {/* strike point */}
-      <circle cx={xAt(0)} cy={yS0} r="8" fill="rgba(203,168,106,0.18)" />
-      <circle cx={xAt(0)} cy={yS0} r="3" fill="#e3c892" />
+      <circle cx={xAt(0)} cy={yS0} r="8" fill="rgba(224,189,122,0.18)" />
+      <circle cx={xAt(0)} cy={yS0} r="3" fill="#ebcf98" />
       {step === 0 ? (
         <text x={xAt(0) + 14} y={yS0 - 10} fill="#f4f2ee" style={mono}>STRIKE</text>
       ) : null}
 
       {step === 2 ? (
         <g>
-          <circle cx={xAt(9)} cy={yAt(107.3)} r="14" fill="rgba(243,227,190,0.14)" />
+          <circle cx={xAt(9)} cy={yAt(107.3)} r="14" fill="rgba(245,226,184,0.14)" />
           <circle cx={xAt(9)} cy={yAt(107.3)} r="4" fill="#fbf3df" />
           {!compact ? (
             <>
-              <rect x={xAt(9) + 14} y={yAt(107.3) - 22} width="44" height="18" rx="9" fill="rgba(203,168,106,0.16)" stroke="rgba(203,168,106,0.5)" />
-              <text x={xAt(9) + 22} y={yAt(107.3) - 9} fill="#e3c892" style={mono}>CASH</text>
-              <text x={xAt(9) + 14} y={yAt(107.3) + 14} fill="#cba86a" style={mono}>AUTOCALLED</text>
+              <rect x={xAt(9) + 14} y={yAt(107.3) - 22} width="44" height="18" rx="9" fill="rgba(224,189,122,0.16)" stroke="rgba(224,189,122,0.5)" />
+              <text x={xAt(9) + 22} y={yAt(107.3) - 9} fill="#ebcf98" style={mono}>CASH</text>
+              <text x={xAt(9) + 14} y={yAt(107.3) + 14} fill="#e0bd7a" style={mono}>AUTOCALLED</text>
             </>
           ) : null}
         </g>
@@ -116,8 +116,8 @@ export function PathChart({ step, compact = false }: { step: ChartStep; compact?
         const dim = step === 2 && i > 9;
         return (
           <g key={i}>
-            <line x1={xAt(i)} x2={xAt(i)} y1={BOTTOM} y2={BOTTOM + 5} stroke={active ? "#cba86a" : "rgba(255,255,255,0.3)"} />
-            <text x={xAt(i)} y={BOTTOM + 18} textAnchor="middle" fill={active ? "#e3c892" : dim ? "rgba(166,163,156,0.35)" : "#a6a39c"} style={mono}>
+            <line x1={xAt(i)} x2={xAt(i)} y1={BOTTOM} y2={BOTTOM + 5} stroke={active ? "#e0bd7a" : "rgba(255,255,255,0.3)"} />
+            <text x={xAt(i)} y={BOTTOM + 18} textAnchor="middle" fill={active ? "#ebcf98" : dim ? "rgba(166,163,156,0.35)" : "#a6a39c"} style={mono}>
               {i + 1}
             </text>
           </g>

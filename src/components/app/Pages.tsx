@@ -128,7 +128,7 @@ function Ring({ pct, label }: { pct: number; label: string }) {
   return (
     <svg viewBox="0 0 128 128" className="size-[128px] shrink-0" aria-label={`${pct}% ${label}`}>
       <circle cx="64" cy="64" r={r} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
-      <circle cx="64" cy="64" r={r} fill="none" stroke="#cba86a" strokeWidth="6" strokeLinecap="round" strokeDasharray={`${(c * pct) / 100} ${c}`} transform="rotate(-90 64 64)" />
+      <circle cx="64" cy="64" r={r} fill="none" stroke="#e0bd7a" strokeWidth="6" strokeLinecap="round" strokeDasharray={`${(c * pct) / 100} ${c}`} transform="rotate(-90 64 64)" />
       <text x="64" y="64" textAnchor="middle" fill="#f4f2ee" style={{ fontFamily: "var(--font-mono)", fontSize: 18 }}>
         {pct}%
       </text>
@@ -170,7 +170,7 @@ export function BackstopPage() {
           </Panel>
           <Panel title="NAV per share · 30 d" right="1.0000 → 1.0000">
             <svg viewBox="0 0 600 90" className="h-[90px] w-full" aria-hidden>
-              <line x1="0" x2="600" y1="45" y2="45" stroke="#cba86a" strokeOpacity="0.6" strokeDasharray="3 5" />
+              <line x1="0" x2="600" y1="45" y2="45" stroke="#e0bd7a" strokeOpacity="0.6" strokeDasharray="3 5" />
             </svg>
             <p className="mt-2 flex justify-between font-mono text-[11px] text-ink-3">
               <span>30 d ago</span>
@@ -244,7 +244,7 @@ export function StakePage() {
         <div className="grid min-w-0 gap-6">
           <Panel title="Exchange rate · 120 d" right="1.0000 → 1.0000">
             <svg viewBox="0 0 600 90" className="h-[90px] w-full" aria-hidden>
-              <line x1="0" x2="600" y1="60" y2="60" stroke="#cba86a" strokeOpacity="0.6" strokeDasharray="3 5" />
+              <line x1="0" x2="600" y1="60" y2="60" stroke="#e0bd7a" strokeOpacity="0.6" strokeDasharray="3 5" />
             </svg>
             <p className="mt-2 text-[13px] text-ink-3">sBERRIER does not rebase. Rewards raise how much BERRIER each sBERRIER redeems for, so the rate can only go up.</p>
           </Panel>
@@ -379,7 +379,7 @@ export function BuybackPage() {
             <text x="580" y={14 + 0.72 * 140} textAnchor="end" fill="#e0574f" style={{ fontFamily: "var(--font-mono)", fontSize: 10.5 }}>
               FLOOR
             </text>
-            <polyline points={pts} fill="none" stroke="#e3c892" strokeWidth="1.6" />
+            <polyline points={pts} fill="none" stroke="#ebcf98" strokeWidth="1.6" />
             <text x="24" y="16" fill="#a6a39c" style={{ fontFamily: "var(--font-mono)", fontSize: 10.5 }}>
               START PRICE
             </text>

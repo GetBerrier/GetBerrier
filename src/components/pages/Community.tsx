@@ -68,7 +68,7 @@ export function CommunityView() {
   return (
     <>
       <section className="relative overflow-hidden pt-32">
-        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_75%_30%,rgba(203,168,106,0.09),transparent_70%)]" />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_75%_30%,rgba(224,189,122,0.09),transparent_70%)]" />
         <div className="wrap">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.06] pb-5">
             <p className="label">Community · points, streaks, referrals, leaderboard</p>
@@ -100,7 +100,7 @@ export function CommunityView() {
                   const h = step?.m === "5×" ? 100 : step?.m === "2.5×" ? 60 : step?.m === "1.5×" ? 38 : 22;
                   return (
                     <div key={i} className="flex flex-col items-center gap-2">
-                      <div className="w-full rounded-sm bg-[linear-gradient(180deg,#e3c892,#9a7a44)]" style={{ height: h, opacity: 0.35 + (i / 12) * 0.65 }} />
+                      <div className="w-full rounded-sm bg-[linear-gradient(180deg,#ebcf98,#a8854a)]" style={{ height: h, opacity: 0.35 + (i / 12) * 0.65 }} />
                       <span className="font-mono text-[10px] text-ink-3">{String(i + 1).padStart(2, "0")}</span>
                     </div>
                   );

@@ -247,7 +247,7 @@ export function BuildOverview() {
                         <p><span className="num block text-[13px]">72%</span><span className="text-[9px] text-ink-3">barrier</span></p>
                         <p><span className="num block text-[13px]">12</span><span className="text-[9px] text-ink-3">closes</span></p>
                       </div>
-                      <p className="mt-3 rounded-full bg-[linear-gradient(135deg,#f3e3be,#cba86a)] py-1.5 text-center text-[11px] font-medium text-[#17130b]">View note</p>
+                      <p className="mt-3 rounded-full bg-[linear-gradient(135deg,#f5e2b8,#e0bd7a)] py-1.5 text-center text-[11px] font-medium text-[#17130b]">View note</p>
                     </div>
                   </>
                 ),
@@ -273,7 +273,7 @@ export function BuildOverview() {
                         </p>
                       ))}
                     </div>
-                    <p className="mt-4 rounded-full bg-[linear-gradient(135deg,#f3e3be,#cba86a)] py-1.5 text-center text-[11px] font-medium text-[#17130b]">Review order</p>
+                    <p className="mt-4 rounded-full bg-[linear-gradient(135deg,#f5e2b8,#e0bd7a)] py-1.5 text-center text-[11px] font-medium text-[#17130b]">Review order</p>
                   </>
                 ),
               },

@@ -12,23 +12,23 @@ function NotesFigure() {
   return (
     <svg viewBox="0 0 440 330" className="h-auto w-full" aria-hidden>
       {path.map((_, i) => (
-        <line key={i} x1={xAt(i)} x2={xAt(i)} y1={40} y2={286} stroke="rgba(203,168,106,0.22)" />
+        <line key={i} x1={xAt(i)} x2={xAt(i)} y1={40} y2={286} stroke="rgba(224,189,122,0.22)" />
       ))}
       <rect x={xAt(0)} y={yB} width={xAt(12) - xAt(0)} height={286 - yB} fill="rgba(224,87,79,0.07)" />
       <line x1={xAt(0)} x2={xAt(12)} y1={yAt(105)} y2={yAt(105)} stroke="rgba(244,242,238,0.25)" strokeDasharray="3 4" />
       <text x={xAt(0)} y={yAt(105) - 8} fill="#a6a39c" style={mono}>AUTOCALL 105</text>
-      <line x1={xAt(0)} x2={xAt(12)} y1={yAt(100)} y2={yAt(100)} stroke="#cba86a" strokeOpacity="0.7" />
-      <text x={xAt(0)} y={yAt(100) + 16} fill="#cba86a" style={mono}>S0 100</text>
+      <line x1={xAt(0)} x2={xAt(12)} y1={yAt(100)} y2={yAt(100)} stroke="#e0bd7a" strokeOpacity="0.7" />
+      <text x={xAt(0)} y={yAt(100) + 16} fill="#e0bd7a" style={mono}>S0 100</text>
       <line x1={xAt(0)} x2={xAt(12)} y1={yB} y2={yB} stroke="rgba(244,242,238,0.5)" />
       <text x={xAt(0)} y={yB - 8} fill="#d8d4cc" style={mono}>BARRIER 80</text>
       <text x={xAt(12)} y={276} textAnchor="end" fill="#83817b" style={mono}>GUARD</text>
-      <text x={xAt(12)} y={30} textAnchor="end" fill="#cba86a" style={mono}>12 COUPONS</text>
+      <text x={xAt(12)} y={30} textAnchor="end" fill="#e0bd7a" style={mono}>12 COUPONS</text>
       <polyline points={path.map((p, i) => `${xAt(i)},${yAt(p)}`).join(" ")} fill="none" stroke="#f4f2ee" strokeOpacity="0.85" strokeWidth="1.5" strokeLinejoin="round" />
       {path.map((p, i) => (
         <g key={i}>
-          <circle cx={xAt(i)} cy={yAt(p)} r="6" fill="rgba(203,168,106,0.16)" />
-          <circle cx={xAt(i)} cy={yAt(p)} r="2.4" fill={i === 12 ? "#fbf3df" : "#cba86a"} />
-          <circle cx={xAt(i)} cy={286} r="1.8" fill="#cba86a" />
+          <circle cx={xAt(i)} cy={yAt(p)} r="6" fill="rgba(224,189,122,0.16)" />
+          <circle cx={xAt(i)} cy={yAt(p)} r="2.4" fill={i === 12 ? "#fbf3df" : "#e0bd7a"} />
+          <circle cx={xAt(i)} cy={286} r="1.8" fill="#e0bd7a" />
         </g>
       ))}
       <text x={xAt(12) - 8} y={yAt(104.1) - 12} textAnchor="end" fill="#f4f2ee" style={mono}>CASH</text>
@@ -44,19 +44,19 @@ function CreditFigure() {
   return (
     <svg viewBox="0 0 220 270" className="h-auto w-full max-w-[220px]" aria-hidden>
       <circle cx="68" cy="66" r={r} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5" />
-      <circle cx="68" cy="66" r={r} fill="none" stroke="#cba86a" strokeWidth="1.5" strokeDasharray={`${c * 0.8} ${c}`} transform="rotate(-90 68 66)" />
+      <circle cx="68" cy="66" r={r} fill="none" stroke="#e0bd7a" strokeWidth="1.5" strokeDasharray={`${c * 0.8} ${c}`} transform="rotate(-90 68 66)" />
       <text x="68" y="62" textAnchor="middle" fill="#f4f2ee" style={mono}>CARRY</text>
       <text x="68" y="77" textAnchor="middle" fill="#a6a39c" style={mono}>WRAPPED</text>
       <line x1="114" x2="200" y1="66" y2="66" stroke="rgba(255,255,255,0.18)" strokeDasharray="2 4" />
-      <text x="20" y="138" fill="#cba86a" style={mono}>MARK 80%</text>
+      <text x="20" y="138" fill="#e0bd7a" style={mono}>MARK 80%</text>
       <text x="20" y="152" fill="#a6a39c" style={mono}>OF LEG VALUE</text>
       <text x="20" y="184" fill="#f4f2ee" style={mono}>DRAWN 31%</text>
       <rect x="20" y="194" width="180" height="22" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)" />
-      <rect x="20" y="194" width="56" height="22" fill="rgba(203,168,106,0.28)" />
+      <rect x="20" y="194" width="56" height="22" fill="rgba(224,189,122,0.28)" />
       <line x1={20 + 180 * (CREDIT.lltv / 100)} x2={20 + 180 * (CREDIT.lltv / 100)} y1="188" y2="222" stroke="#f4f2ee" strokeWidth="1.5" />
       <text x={26 + 180 * (CREDIT.lltv / 100)} y="236" fill="#a6a39c" style={mono}>LLTV {CREDIT.lltv}%</text>
       <text x="20" y="236" fill="#83817b" style={mono}>0</text>
-      <text x="20" y="262" fill="#cba86a" style={mono}>COUPONS KEEP ACCRUING</text>
+      <text x="20" y="262" fill="#e0bd7a" style={mono}>COUPONS KEEP ACCRUING</text>
     </svg>
   );
 }
@@ -67,9 +67,9 @@ function OmniFigure() {
       <text x="20" y="40" fill="#a6a39c" style={mono}>ROBINHOOD CHAIN</text>
       <rect x="20" y="52" width="68" height="30" rx="4" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.22)" />
       <text x="54" y="71" textAnchor="middle" fill="#f4f2ee" style={mono}>ESCROW</text>
-      <rect x="100" y="55" width="80" height="24" rx="4" fill="rgba(203,168,106,0.08)" stroke="#cba86a" />
-      <circle cx="111" cy="67" r="2.2" fill="#cba86a" />
-      <text x="146" y="71" textAnchor="middle" fill="#e3c892" style={mono}>CARRY</text>
+      <rect x="100" y="55" width="80" height="24" rx="4" fill="rgba(224,189,122,0.08)" stroke="#e0bd7a" />
+      <circle cx="111" cy="67" r="2.2" fill="#e0bd7a" />
+      <text x="146" y="71" textAnchor="middle" fill="#ebcf98" style={mono}>CARRY</text>
       <text x="74" y="118" fill="#a6a39c" style={mono}>LAYERZERO</text>
       <path d="M140 80 C140 140, 90 150, 90 200" fill="none" stroke="rgba(244,242,238,0.45)" strokeDasharray="3 4">
         <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.2s" repeatCount="indefinite" />
