@@ -6,6 +6,7 @@ Get Berrier issues autocallable barrier notes on tokenised stocks and settles th
 
 - Website: https://getberrier.xyz
 - X: https://x.com/getberrier
+- Source: https://github.com/GetBerrier/GetBerrier
 - Token: **$BERRIER** on Robinhood Chain (contract address published at launch)
 
 ## The problem

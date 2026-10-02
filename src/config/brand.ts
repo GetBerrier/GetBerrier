@@ -21,7 +21,7 @@ export const BRAND = {
   x: "https://x.com/getberrier",
   xHandle: "@getberrier",
   /** Public GitHub repository. Empty hides every GitHub link on the site. */
-  github: "https://github.com/" as string,
+  github: "https://github.com/GetBerrier/GetBerrier" as string,
   ca: CA,
 } as const;
 
